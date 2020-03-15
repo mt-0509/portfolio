@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  margin-left: 30px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.contents {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper p {
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.wrapper input {
+  width: 300px;
+  height: 25px;
+  font-size: 16px;
+  border: 1px solid gray;
+}
+
+button {
+  cursor: pointer;
+  margin-left: 30px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" rel="stylesheet"> <!-- fontawesome -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="js/script.js">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>Portfolio</title>
+</head>
+<body>
+<header> <!-- ヘッダー始まり -->
+    <a href="#"><h1>Takeshi's Portfolio</h1></a>
+ 
+  <div> <!-- ハンバーガーメニュー -->
+    <nav class="global-nav">
+      <ul class="global-nav__list">
+        <li class="global-nav__item"><a href="#link2124">Profile</a></li>
+        <li class="global-nav__item"><a href="#link2126">Skill</a></li>
+        <li class="global-nav__item"><a href="#link2127">Portfolio</a></li>
+        <li class="global-nav__item"><a href="#link2021">Contact</a></li>
+      </ul>
+    </nav>
+ 
+    
+    <div class="hamburger" id="js-hamburger">
+      <span class="hamburger__line hamburger__line--1"></span>
+      <span class="hamburger__line hamburger__line--2"></span>
+      <span class="hamburger__line hamburger__line--3"></span>
+    </div>
+    <div class="black-bg" id="js-black-bg"></div>
+  </div> <!-- ハンバーガーメニュー -->
+</header>
+
+
+
+
+</header> <!-- ヘッダー終わり -->
+ 
+<!-- ヘッダー画像始まり -->
+<div class="header-img">
+  <img id="mypic" src="img\brick-wall-1834784_1280.jpg" >
+  <p>Welcome to my portfolio</p>
+</div>
+<!-- ヘッダー画像終わり -->
+ 
+<main> <!-- コンテンツ始まり -->
+  <section class="profile"> <!-- 自己紹介始まり -->
+    <h2 id="link2124" class="item_text">Profile</h2>
+    <div class="self-introduction">
+      <div class="self-introduction-img">
+        <img src="img\prof.jpg" alt="プロフィール画像">
+        <p>たけし</p>
+      </div>
+    
+      <div class="self-introduction-text">
+        <p>私のポートフォリオサイトをご覧くださりありがとうございます！</p>
+        <p>簡単に自己紹介させて頂きます。</p>
+        <p>福岡県出身の26歳で趣味は読書です。</p>
+        <p>プログラミングを始めたきっかけは自分でネットショップを始めようとした時にプログラミングの存在を知りました。</p>
+        <p>それから自分でコードを書けるようになりたいと思い、独学で学習を始めました。</p>
+      </div>
+    </div>
+  </section> <!-- 自己紹介終わり -->
+  
+  <section class="skill"> <!-- スキル紹介始まり -->
+    <h2 id="link2126">Skill</h2>
+    <div class="skill-contents">
+      <div class="icon-mar">
+        <i class="fab fa-html5 fa-7x"></i>
+        <p class="contents-title">HTML/CSS</p>
+        <p>基本的なマークアップができます。</p>
+      </div>
+      <div class="icon-mar">
+        <i class="fab fa-js-square fa-7x"></i>
+        <p class="contents-title">JavaScript</p>
+        <p>簡単な動きを実装することが可能です。また、ミニアプリを作ることができます。</p>
+      </div>
+      <div class="icon">
+        <i class="fab fa-bootstrap fa-7x"></i>
+        <p class="contents-title">Bootstrap</p>
+        <p>レスポンシブ対応にすることができます。</p>
+      </div>
+    </div>
+  </section> <!-- スキル紹介終わり -->
+  
+  
+  <section class="portfolio"> <!-- ※架空サイトを作成したら挿入していく -->
+    <h2 id="link2127">portfolio</h2>
+    <div class="wrapper">
+      <div class="portfolio-contents-mar">
+        <a href="FizzBuzz/index.html" target="_blank">
+          <img src="img/fizzbuzz.png" alt="">
+        </a>
+        <a href="FizzBuzz/index.html" target="_blank">FizzBuzz</a>
+        <p>JavaScriptを使って自作のFizzBuzzアプリを作りました。</p>
+      </div>
+      <div class="portfolio-contents-mar">
+        <a href="Todolist/index.html" target="_blank">
+          <img src="img/todo.png" alt="">
+        </a>
+        <a href="Todolist/index.html" target="_blank">Todoリスト</a>
+        <p>JavaScriptを使って自作のtodoリストアプリを作りました。</p>
+      </div>
+      <div class="portfolio-contents">
+        <img src="img\strawberry-4812400_640.jpg" alt="">
+        <h4>portfolio Title</h4>
+        <p>ポートフォリオの説明</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact"> <!-- お問い合わせフォーム的なのを作成する -->
+    <h2 id="link2021">contact</h2>
+    <div class="contact-form">
+      <form action="#" method="POST">
+        <!-- <p><label for="name-field">名前</label><br> -->
+        <input type="text" name="name" id="name-field" placeholder="お名前"></p>
+  
+        <!-- <p><label for="email-field">メールアドレス</label><br> -->
+        <input type="email" name="emai" id="email-field" placeholder="メールアドレス"></p>
+  
+        <!-- <p><label for="coment-field">お問い合わせ内容</label><br> -->
+        <textarea name="coment" id="coment-field" cols="30" rows="10" placeholder="お問い合わせ内容"></textarea></p>
+      </form>
+    </div>
+  
+  </section>
+  </main> <!-- コンテンツ終わり -->
+  <footer>
+    <div class="">
+      <a href="https://twitter.com/takeshi_104">
+        <i id="twitter" class="fab fa-twitter fa-2x"></i>
+      </a>
+      <p>©takeshi 2020</p>
+    </div>
+  
+  </footer>
+  <script src="js/script.js"></script>
+  </body>
+  </html>
+ 

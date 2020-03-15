@@ -1,0 +1,411 @@
+body, div, p, h1, h2, h3, h4, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+ 
+p, td, th, li {
+  line-height: 1.8;
+  list-style: none;
+}
+ 
+img {
+  max-width: 100%;
+  height: auto;
+}
+ 
+
+/* ===== すべて共通 ===== */
+html, body {
+  font-size: 16px;
+  background-color: #f8f9fa;
+  color: #393939;
+  box-sizing: border-box;
+}
+ 
+section {
+  margin-top: 200px;
+}
+ 
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+ 
+/* header */
+header {
+  background-color: rgb(86, 176, 236);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+ 
+header a {
+  text-decoration: none;
+  color: #393939;
+}
+ 
+@media screen and (max-width: 360px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+ 
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+ 
+  /* ハンバーガーメニュー */
+ 
+  .global-nav {
+    position: fixed;
+    right: -320px; /* これで隠れる */
+    top: 0;
+    width: 300px; /* スマホに収まるくらい */
+    height: 100vh;
+    padding-top: 40px;
+    background-color: #fff;
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  }
+  .hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
+    height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
+    cursor: pointer;
+    z-index: 300;  
+  }
+  .global-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .global-nav__item {
+    text-align: center;
+    padding: 0 14px;
+  }
+  .global-nav__item a {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #111;
+  }
+  .global-nav__item a:hover {
+    background-color: #eee;
+  }
+  .hamburger__line {
+    position: absolute;
+    left: 11px;
+    width: 18px;
+    height: 1px;
+    background-color: #111;
+    transition: all .6s;
+  
+  }
+  .hamburger__line--1 {
+    top: 14px;
+  }
+  .hamburger__line--2 {
+    top: 20px;
+  }
+  .hamburger__line--3 {
+    top: 26px;
+  }
+  .black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+  }
+  /* 表示された時用のCSS */
+  .nav-open .global-nav {
+    right: 0;
+  }
+  .nav-open .black-bg {
+    opacity: .8;
+    visibility: visible;
+  }
+  .nav-open .hamburger__line--1 {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+  .nav-open .hamburger__line--2 {
+    width: 0;
+    left: 50%;
+  }
+  .nav-open .hamburger__line--3 {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+ 
+}
+
+
+
+img {
+  display: block;
+  height: auto;
+}
+ 
+/* header固定 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  transition: .3s;
+}
+ 
+/* ===== レスポンシブ(PC) ===== */
+@media screen and (min-width: 769px) {
+ 
+/* ヘッダー */
+header {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  background-color: rgb(86, 176, 236);
+}
+ 
+header h1 {
+  font-size: 2.5em;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#mypic {
+  width: 100%;
+  height: auto;
+}
+ 
+
+/* ヘッダーナビゲーション */
+ 
+.global-nav__list {
+  display: flex;
+}
+ 
+.global-nav__list li {
+  margin: 10px;
+  padding: 20px;
+}
+ 
+.global-nav__list a {
+  color: rgb(16, 18, 20);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+
+/* ヘッダーナビゲーション(ホバー) */
+.global-nav__list a:hover {
+  color: #fff;
+}
+ 
+/* ヘッダー画像 */
+.header-img p {
+  font-size: 4em;
+}
+ 
+ 
+} /* ===== レスポンシブ(PC)終わり ===== */
+ 
+/* ヘッダー画像 */
+
+
+.header-img {
+  position: relative;
+}
+ 
+.header-img p {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  /* font-size: 2em; */
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+ 
+@media screen and (max-width: 768px) {
+  .header-img p {
+    font-size: 2em;
+  }
+}
+ 
+
+/* profiele */
+.self-introduction-img img {
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+ 
+.self-introduction-img p {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+ 
+.self-introduction-text {
+  line-height: 2em;
+  margin-top: 20px;
+  background: rgb(238, 205, 175);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+} 
+ 
+/* ===== レスポンシブ(PC) ===== */
+@media screen and (min-width: 768px) {
+  .self-introduction {
+    display: flex;
+    flex-flow: row;
+  }
+  .self-introduction-text {
+    font-size: 1.3em;
+  }
+} /* ===== レスポンシブ(PC)終わり ===== */
+ 
+
+/* skill */
+.skill-contents {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+ 
+.icon-mar {
+  margin-bottom: 30px;
+}
+ 
+.contents-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+ 
+
+.icon i, .icon-mar i {
+  color: rgba(0, 0, 0, 0.733);
+  /* margin-bottom: 20px; */
+}
+ 
+/* ===== レスポンシブ(PC) ===== */
+@media screen and (min-width: 768px) {
+  .skill-contents {
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 1.2em;
+  }
+  .icon, .icon-mar {
+    width: 300px;
+    height: 200px;
+  }
+} /* ===== レスポンシブ(PC)終わり ===== */
+ 
+
+/* portfolio */
+.portfolio-contents img, .portfolio-contents-mar img  {
+  width: 70%;
+  margin: 0px auto;
+}
+ 
+.portfolio-contents-mar {
+  margin-bottom: 30px;
+}
+ 
+.wrapper {
+  text-align: center;
+}
+
+.portfolio-contents a, .portfolio-contents-mar a {
+  color: #0073bc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.portfolio-contents a:hover, .portfolio-contents-mar a:hover {
+  color: #b7dbf2;
+}
+ 
+/* ===== レスポンシブ(PC) ===== */
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+
+  .wrapper h4 {
+    font-size: 1.3em;
+  }
+
+  .wrapper p {
+    font-size: 1.2em;
+  }
+  
+  .portfolio-contents p, .portfolio-contents-mar p {
+    text-align: center;
+  } 
+
+  .portfolio-contents img, .portfolio-contents-mar img  {
+    width: 400px;
+    height: 300px;
+    margin: 0px auto;
+  }
+
+  
+}
+ 
+/* contact */
+.contact-form {
+  text-align: center;
+}
+ 
+input, textarea {
+  box-sizing: border-box;
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  padding: 0.75em;
+  font-size: 16px;
+  border-radius: 8px;
+  width: 70%;
+}
+ 
+/* footer */
+footer {
+  text-align: center;
+}
+ 
+#twitter {
+  color: rgba(29, 161, 242);
+  margin-bottom: 10px;
+}
+ 
